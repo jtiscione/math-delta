@@ -43,7 +43,7 @@ describe('#kronecker_delta', function() {
         }, RangeError);
 
         assert.throws(function() {
-            delta.kronecker_delta(9007199254740992, 9007199254740992);
+            delta.kronecker_delta(Math.POSITIVE_INFINITY, Math.POSITIVE_INFINITY);
         }, RangeError);
 
         chai.assert.throws(function() {
@@ -51,7 +51,7 @@ describe('#kronecker_delta', function() {
         }, RangeError);
 
         chai.assert.throws(function() {
-            delta.kronecker_delta(9007199254740992, 9007199254740992);
+            delta.kronecker_delta(Math.POSITIVE_INFINITY, Math.POSITIVE_INFINITY);
         }, RangeError);
 
         // BDD styles
@@ -60,7 +60,7 @@ describe('#kronecker_delta', function() {
         }).to.throw.RangeError;
 
         chai.expect(function() {
-            delta.kronecker_delta(9007199254740992, 9007199254740992);
+            delta.kronecker_delta(Math.POSITIVE_INFINITY, Math.POSITIVE_INFINITY);
         }).to.throw.RangeError;
 
         (function(){
@@ -68,7 +68,7 @@ describe('#kronecker_delta', function() {
         }).should.throw(RangeError);
 
         (function(){
-            delta.kronecker_delta(9007199254740992, 9007199254740992)
+            delta.kronecker_delta((Math.POSITIVE_INFINITY, Math.POSITIVE_INFINITY))
         }).should.throw(RangeError);
 
         (function(){delta.kronecker_delta(1, 1)
@@ -139,7 +139,7 @@ describe('#dirac_delta', function() {
         chai.assert.equal(delta.dirac_delta(3), 0);
 
         chai.expect(delta.dirac_delta(3)).to.equal(0);
-        chai.expect(delta.dirac_delta(Math.PI)).to.equal(0);
+        chai.expect(delta.dirac_delta("2", "Corinthians")).to.equal(0);
         chai.expect(delta.dirac_delta(Number.NEGATIVE_INFINITY)).to.equal(0);
 
         delta.dirac_delta(Number.POSITIVE_INFINITY).should.equal(0);
