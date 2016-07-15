@@ -149,7 +149,7 @@ describe('#dirac_delta', function() {
 
 describe ('#dirac_delta_intgral', function() {
     it('Returns NaN when not given a numeric argument', function(){
-        chai.expect(delta.dirac_delta_integral('Donald', "Trump")).to.be.NaN;
+        chai.expect(delta.dirac_delta_integral('epic', "fail")).to.be.NaN;
         chai.expect(delta.dirac_delta_integral(2, "Corinthians")).to.be.NaN;
     });
     it ('Handles indefinite integrals', function() {
@@ -177,8 +177,8 @@ describe ('#dirac_delta_intgral', function() {
 });
 
 describe ('#nascent_delta', function() {
-    it('Returns NaN when not given a numeric argument', function(){
-        chai.expect(delta.dirac_delta_integral('Donald', 'Trump')).to.be.NaN;
+    it('Returns NaN when not given two numeric arguments', function(){
+        chai.expect(delta.dirac_delta_integral('2', 'Corinthians')).to.be.NaN;
     });
     it('Returns dirac_delta(x) when a == 0', function() {
         for (var x = -5; x <= 5; x++) {
