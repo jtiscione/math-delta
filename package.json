@@ -1,6 +1,6 @@
 {
   "name": "math-delta",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Kronecker and Dirac delta functions",
   "main": "math-delta.js",
   "directories": {
@@ -9,6 +9,14 @@
   "scripts": {
     "test": "node_modules/.bin/mocha --reporter spec"
   },
+  "repository": {
+    "type" : "git",
+    "url": "git://github.com/jtiscione/math-delta.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jtiscione/math-delta/issues"
+  },
+  "homepage": "https://github.com/jtiscione/math-delta#readme",
   "keywords": [
     "mathematics",
     "physics",
