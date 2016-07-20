@@ -1,3 +1,7 @@
+const erf = require("math-erf");
+const exp = require("math-exp");
+
+
 function numerize(arg) {
     return (typeof arg == 'string') ? parseFloat(arg) : arg;
 }
@@ -53,7 +57,7 @@ module.exports = {
         if (a === 0) {
             return this.dirac_delta(x);
         }
-        return Math.exp(-(x*x)/(a*a)) / (a * Math.sqrt(Math.PI));
+        return exp(-(x*x)/(a*a)) / (a * Math.sqrt(Math.PI));
     },
 
     nascent_delta_integral: function(a, lowerBound, upperBound) {
@@ -69,7 +73,7 @@ module.exports = {
         if (a === 0) {
             return this.dirac_delta_integral(lowerBound, upperBound);
         }
-        return "TODO";
+        return (erf(upperBound/a) - erf(lowerBound / a)) / 2;
     }
 
 };

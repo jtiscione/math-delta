@@ -1,0 +1,27 @@
+{
+  "name": "math-delta",
+  "version": "1.0.0",
+  "description": "Kronecker and Dirac delta functions",
+  "main": "math-delta.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter spec"
+  },
+  "keywords": [
+    "mathematics",
+    "physics",
+    "quantum-mechanics"
+  ],
+  "author": "Jason Tiscione <tiscione@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  },
+  "dependencies": {
+    "math-erf": "^1.0.0",
+    "math-exp": "^1.0.0"
+  }
+}

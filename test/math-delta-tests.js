@@ -43,7 +43,7 @@ describe('#kronecker_delta', function() {
         }, RangeError);
 
         assert.throws(function() {
-            delta.kronecker_delta(Math.POSITIVE_INFINITY, Math.POSITIVE_INFINITY);
+            delta.kronecker_delta(Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY);
         }, RangeError);
 
         chai.assert.throws(function() {
@@ -51,7 +51,7 @@ describe('#kronecker_delta', function() {
         }, RangeError);
 
         chai.assert.throws(function() {
-            delta.kronecker_delta(Math.POSITIVE_INFINITY, Math.POSITIVE_INFINITY);
+            delta.kronecker_delta(Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY);
         }, RangeError);
 
         // BDD styles
@@ -68,7 +68,7 @@ describe('#kronecker_delta', function() {
         }).should.throw(RangeError);
 
         (function(){
-            delta.kronecker_delta((Math.POSITIVE_INFINITY, Math.POSITIVE_INFINITY))
+            delta.kronecker_delta(Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY)
         }).should.throw(RangeError);
 
         (function(){delta.kronecker_delta(1, 1)
